@@ -19,3 +19,20 @@ def get_url(search_item):
         if any(word in url_text for word in black_list):
             continue
         yield (url_text)
+
+def get_content(url):
+    '''
+    To get the contents of the url
+
+    url    : string containing the url
+
+    return : a list of string containing content
+
+    '''
+    page  = requests.get(url).text
+    soup  = BeautifulSoup(page, "html.parser")
+    content  = []
+    data = ''
+    for data in soup.find_all('p'):
+        content.append(data.get_text())
+    return content

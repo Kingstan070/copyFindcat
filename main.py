@@ -71,8 +71,8 @@ def getData_lines():
         print()
         return lines
 
-getData_lines()
 
+print(fl.get_content(sys.argv[1]))
 
 #print(a.check4plagirism("src/text1.txt","src/text2.txt"))
 

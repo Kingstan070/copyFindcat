@@ -6,7 +6,6 @@ import scrapper.find_link as fl
 
 from rich import print as rprint
 from rich.progress import track
-from rich.prompt import Prompt
 
 banner = '''
  _____                  ______ _           _ _____       _   
@@ -58,17 +57,18 @@ def getData_lines():
     '''
     try:
         i = 0
-        lines = [""]
-        lines[0] = input("Enter the text     : ")
+        lines = []
+        lines[0] = input("Enter the text : ",end)
         while True:
             i += 1
-            lines.append(Prompt.ask("Ctrl+C to Exit     "))
+            lines[1] = input("(Ctrl + C)     : "
+)
     except KeyboardInterrupt:
         pass
     except Exception as e:
         print(e)
     finally:
-        print()
+        print(lines)
         return lines
 
 getData_lines()

@@ -1,4 +1,5 @@
 import requests
+import re
 from bs4 import BeautifulSoup
 
 def get_url(search_item):
@@ -7,9 +8,11 @@ def get_url(search_item):
 
     returns     : None
     '''
-    url = "https://www.google.com/search?q="+search_item
-    response = requests.get(url)
-    doc = BeautifulSoup(response.text,"html.parser")
-    mydivs = doc.find_all("div", class_="yuRUbf")
-    for div in mydivs:
-        print(div)
+    page = requests.get("https://www.google.com/search?q="+search_item)
+    soup = BeautifulSoup(page.content,"html.parser")
+    link = soup.findAll("a")
+    for link in soup.find_all("a",href=re.compile(r"((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*")):
+        url_text = re.split(":(?=http)",link["href"].replace("/url?q=",""))
+        if "google.com" in url_text:
+            continue
+        print(url_text)

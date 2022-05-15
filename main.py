@@ -71,8 +71,61 @@ def getData_lines():
         print()
         return lines
 
+def filter_text(content):
+    '''
+    To filter unwanted content from the web content
 
-print(fl.get_content(sys.argv[1]))
+    content : String containing the web content
+
+    returns : Returns the filtered list
+
+    '''
+    # Discard if the element is this
+    black_list_full = ["share","learn more","all rights reserved"
+                       "featured","search form","search","all categories"
+                       "sign up for our newsletter", "sign up",
+                       "select page","about"]
+
+    # Discard if the element constains this
+    black_list_few = ["https:/","http:/"]
+    lg = len(content)
+    for j in range(lg):
+        l = len(content)
+        for i in range(0,l):
+            if content[i].strip() == '':
+                content.pop(i)
+                break
+            else:
+                for full in black_list_full:
+                    if content[i].lower().strip() == full:
+                        content.pop(i)
+                        break
+                for few in black_list_few:
+                    if few in content[i]:
+                        content.pop(i)
+                        break
+                break
+    return content
+
+
+
+
+
+
+
+
+
+
+
+
+#------
+# TEST
+#------
+
+print(filter_text(fl.get_content(sys.argv[1])))
+
+
+#print(fl.get_content(sys.argv[1]))
 
 #print(a.check4plagirism("src/text1.txt","src/text2.txt"))
 

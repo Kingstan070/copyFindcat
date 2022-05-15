@@ -33,6 +33,6 @@ def get_content(url):
     soup  = BeautifulSoup(page, "html.parser")
     content  = []
     data = ''
-    for data in soup.find_all('p'):
+    for data in soup.find_all(['p','h1','h2','h3']):
         content.append(data.get_text())
     return content

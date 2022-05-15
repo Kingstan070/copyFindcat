@@ -73,7 +73,7 @@ def main():
     url_and_percentage = {}
     url_list = fl.get_url(search_keys[0]+" "+search_keys[-1])
     if (len(url_list) <= deapth):
-        deapth = url_list
+        deapth = len(url_list)
     for i in track(range(deapth),
                    description="[cyan]Processing...      "):
         try:

@@ -81,13 +81,16 @@ def filter_text(content):
 
     '''
     # Discard if the element is this
-    black_list_full = ["share","learn more","all rights reserved"
-                       "featured","search form","search","all categories"
+    black_list_full = ["share","learn more","all rights reserved",
+                       "featured","search form","search","all categories",
                        "sign up for our newsletter", "sign up",
                        "select page","about"]
 
     # Discard if the element constains this
-    black_list_few = ["https:/","http:/"]
+    black_list_few = ["https:/","http:/","recent blog posts",
+                      "inc. all rights reserved."]
+    '''
+    # THIS IS NOT WORKING ! WHY!!!!!!!!!!!
     lg = len(content)
     for j in range(lg):
         l = len(content)
@@ -105,7 +108,18 @@ def filter_text(content):
                         content.pop(i)
                         break
                 break
-    return content
+    '''
+    l = len(content)
+    contents = []
+    for i in range(l):
+        test_element = content[i].lower().strip()
+        if test_element in black_list_full:
+            continue
+        elif any(few in test_element for few in black_list_few):
+            continue
+        contents.append(content[i].strip())
+
+    return contents
 
 
 

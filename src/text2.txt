@@ -1,15 +1,61 @@
-Green Building – Sustainable – Resilient Success
-Sustainable Design
+ The seeds in a sunflower exhibit a golden spiral, which is tied to the Fibonacci sequence. (Image credit: belterz/Getty Images)
 
-What is green building? Sustainable design, or “green construction,” is a method of wisely using resources to create high-quality, healthier and more energy-efficient homes and commercial buildings. A green building is more than the sum of its parts (think resource conservation)—its process and impacts matter, too.
+The Fibonacci sequence is a series of numbers in which each number is the sum of the two that precede it. Starting at 0 and 1, the sequence looks like this: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, and so on forever. The Fibonacci sequence can be described using a mathematical equation: Xn+2= Xn+1 + Xn
 
-Materials
+People claim there are many special properties about the numerical sequence, such as the fact that it is “nature’s secret code” for building perfect structures, like the Great Pyramid at Giza or the iconic seashell that likely graced the cover of your school mathematics textbook. But much of that is incorrect and the true history of the series is a bit more down-to-earth.
 
-Sustainable design is about finding that balance between high-quality construction and low environmental impact. A lighter footprint means a longer-lasting planet, which is a win for the builder, client, and environment. Green building is a goal and a process. Viewing sustainable building as a process is important, because green-building success isn’t just a matter of building with green materials. Green building combines both materials and processes to maximize efficiency, durability and savings.
-Single-Attribute-Only-Small-Part-of-LCALife Cycle Assessment
+CLOSE
 
-Making smarter decisions at the start can save time, money and frustration later on. Conducting life cycle assessments give you valuable planning and purchasing insights based on the anticipated lifetime impact or expense of a product or process.
+Ancient Trigonometric Table is 3,700 Years Old
 
+A Babylonian clay tablet dating to 3,700 years ago holds the oldest known example of a trigonometric table. Credit: University of New South Wales
 
-Green Globes™ System
+0 seconds of 2 minutes, 7 secondsVolume 0%
+Story behind Fibonacci sequence
+
+The first thing to know is that the sequence is not originally Fibonacci's, who in fact never went by that name. The Italian mathematician who we call Leonardo Fibonacci was born around 1170, and originally known as Leonardo of Pisa, said Keith Devlin, a mathematician at Stanford University.
+
+Only in the 19th century did historians come up with the nickname Fibonacci (roughly meaning, "son of the Bonacci clan"), to distinguish the mathematician from another famous Leonardo of Pisa, Devlin said.
+
+Read more: Large Numbers that Define the Universe
+
+Leonardo of Pisa did not actually discover the sequence, said Devlin, who is also the author of "Finding Fibonacci: The Quest to Rediscover the Forgotten Mathematical Genius Who Changed the World," (Princeton University Press, 2017). Ancient Sanskrit texts that used the Hindu-Arabic numeral system first mention it in 200 B.C. predating Leonardo of Pisa by centuries.
+
+"It's been around forever," Devlin told Live Science.
+
+Portrait of Leonardo Fibonacci, who was thought to have discovered the famous Fibonacci sequence. However, in 1202 in a massive tome, he introduces the sequence with a problem involving rabbits.
+
+Portrait of Leonardo Fibonacci, who was thought to have discovered the famous Fibonacci sequence. However, in 1202 in a massive tome, he introduces the sequence with a problem involving rabbits. (Image credit: Stefano Bianchetti/Corbis via Getty Images)
+
+However, in 1202 Leonardo of Pisa published the massive tome "Liber Abaci," a mathematics "cookbook for how to do calculations," Devlin said.  Written for tradesmen, "Liber Abaci" laid out Hindu-Arabic arithmetic useful for tracking profits, losses, remaining loan balances and so on, he added.
+
+In one place in the book, Leonardo of Pisa introduces the sequence with a problem involving rabbits. The problem goes as follows: Start with a male and a female rabbit. After a month, they mature and produce a litter with another male and female rabbit. A month later, those rabbits reproduce and out comes — you guessed it — another male and female, who also can mate after a month. (Ignore the wildly improbable biology here.) After a year, how many rabbits would you have?
+
+The answer, it turns out, is 144 — and the formula used to get to that answer is what's now known as the Fibonacci sequence.
+
+Read more: 9 equations that changed the world
+
+"Liber Abaci" first introduced the sequence to the Western world. But after a few scant paragraphs on breeding rabbits, Leonardo of Pisa never mentioned the sequence again. In fact, it was mostly forgotten until the 19th century, when mathematicians worked out more about the sequence's mathematical properties. In 1877, French mathematician Édouard Lucas officially named the rabbit problem "the Fibonacci sequence," Devlin said.
+
+The Fibonacci sequence and the golden ratio are eloquent equations, but they aren't as magical as they may seem.
+
+The Fibonacci sequence and the golden ratio are eloquent equations, but they aren't as magical as they may seem. (Image credit: Shutterstock)
+Why is the Fibonacci sequence significant?
+
+Other than being a neat teaching tool, the Fibonacci sequence shows up in a few places in nature. However, it's not some secret code that governs the architecture of the universe, Devlin said.
+
+It's true that the Fibonacci sequence is tightly connected to what's now known as the golden ratio, phi, an irrational number that has a great deal of its own dubious lore. The ratio of successive numbers in the Fibonacci sequence gets ever closer to the golden ratio, which is 1.6180339887498948482...
+
+Read more: The 9 most massive numbers in existence
+
+The golden ratio manages to capture some types of plant growth, Devlin said. For instance, the spiral arrangement of leaves or petals on some plants follows the golden ratio. Pinecones exhibit a golden spiral, as do the seeds in a sunflower, according to "Phyllotaxis: A Systemic Study in Plant Morphogenesis" (Cambridge University Press, 1994). But there are just as many plants that do not follow this rule.
+
+"It's not 'God's only rule' for growing things, let's put it that way," Devlin said.
+The seashell and 'Vitruvian Man'
+
+Perhaps the most famous example of all, the seashell known as the nautilus, does not in fact grow new cells according to the Fibonacci sequence, he added. When people start to draw connections to the human body, art and architecture, links to the Fibonacci sequence go from tenuous to downright fictional.
+
+"It would take a large book to document all the misinformation about the golden ratio, much of which is simply the repetition of the same errors by different authors," George Markowsky, a mathematician who was then at the University of Maine, wrote in a 1992 paper in the College Mathematics Journal.
+
+Much of this misinformation can be attributed to an 1855 book by the German psychologist Adolf Zeising called "Aesthetic Research." Zeising claimed the proportions of the human body were based on the golden ratio. In subsequent years, the golden ratio sprouted "golden rectangles," "golden triangles" and all sorts of theories about where these iconic dimensions crop up.
 

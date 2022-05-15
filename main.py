@@ -50,6 +50,12 @@ def main():
             got_file = True
         elif choice == "tm":
             DATA = getData_lines()
+            os.system('cls||clear')
+            rprint("- "*35)
+            print(banner)
+            rprint("  "*30+"[purple]v. 1.0.")
+            rprint("- "*35)
+            print()
         else:
             rprint("[red] Unexpected error occured!")
             exit()
@@ -57,7 +63,20 @@ def main():
     # Writing the DATA to file, if the file in not provided
     if not got_file:
         write_file(DATA, f_locationDUPL)
-    print(getKeyword(f_locationDUPL))
+
+    search_keys = getKeyword(f_locationDUPL)
+
+    url_and_percentage = {}
+    url_list = fl.get_url(search_keys[0]+" "+search_keys[-1])
+    for i in track(range(5),
+                   description="[cyan]Processing...      "):
+        url_link = next(url_list)
+        url_content = fl.get_content(url_link)
+        write_file(url_content, f_locationTEST)
+        url_and_percentage[url_link] = a.check4plagirism(f_locationTEST,
+                                                           f_locationDUPL)
+    print(url_and_percentage)
+
 
 def write_file(data, f_location):
     '''
@@ -115,7 +134,8 @@ def getKeyword(file_Location):
         if ("." not in line) and (len(line.split()) < 10):
             search_list.append(line)
         try:
-            for i in range(10):
+            for i in track(range(10),
+                           description="Getting search keys"):
                 line = file.readline()
                 search_list.append(line.split('.')[0])
                 search_list.append(line.split('.')[-1])

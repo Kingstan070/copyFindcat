@@ -109,8 +109,10 @@ def filter_text(content):
                         break
                 break
     '''
+
     l = len(content)
     contents = []
+
     for i in range(l):
         test_element = content[i].lower().strip()
         if test_element in black_list_full:

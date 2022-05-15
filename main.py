@@ -7,6 +7,8 @@ import scrapper.find_link as fl
 from rich import print as rprint
 from rich.progress import track
 from rich.prompt import Prompt
+from rich.console import Console
+from rich.table import Table
 
 banner = '''
  _____                  ______ _           _ _____       _   
@@ -32,6 +34,8 @@ def main():
     global got_file
     global f_locationTEST
     global f_locationDUPL
+
+    deapth = 10;
 
     os.system('cls||clear')
     rprint("- "*35)
@@ -68,14 +72,22 @@ def main():
 
     url_and_percentage = {}
     url_list = fl.get_url(search_keys[0]+" "+search_keys[-1])
-    for i in track(range(5),
+    if (len(url_list) <= deapth):
+        deapth = url_list
+    for i in track(range(deapth),
                    description="[cyan]Processing...      "):
-        url_link = next(url_list)
-        url_content = fl.get_content(url_link)
-        write_file(url_content, f_locationTEST)
-        url_and_percentage[url_link] = a.check4plagirism(f_locationTEST,
+        try:
+            url_link = url_list[i]
+            url_content = fl.get_content(url_link)
+            write_file(url_content, f_locationTEST)
+            url_and_percentage[url_link] = a.check4plagirism(f_locationTEST,
                                                            f_locationDUPL)
-    print(url_and_percentage)
+        except StopIteration:
+            break
+        except Exception as e:
+            print(e)
+
+    pretty_print_result(url_and_percentage)
 
 
 def write_file(data, f_location):
@@ -144,6 +156,30 @@ def getKeyword(file_Location):
 
     return filter_text(search_list)
 
+
+def pretty_print_result(url_and_per):
+    '''
+    To pretty print the result in a table format
+
+    url_and_per : Dictionary containing the url and percentage
+                  of plagirism
+
+    returns     : None
+    '''
+
+    # Sorting the key-value pair in dictionary to list
+    result = sorted( url_and_per.items(), key=lambda x: x[1],
+                    reverse=True )
+
+    # Creating table using rich module
+    table = Table(title="Result with Percentage of Plagiarism")
+    table.add_column("No.",justify="left",style="cyan")
+    table.add_column("URL",style="blue")
+    table.add_column("Percentage %", justify="center",style="green")
+    for i in range(len(result)):
+        table.add_row(str(i+1)+".",result[i][0],str(result[i][1]))
+    console = Console()
+    console.print(table)
 
 def filter_text(content):
     '''

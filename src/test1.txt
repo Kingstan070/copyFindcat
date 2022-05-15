@@ -1,4 +1,115 @@
-Fibonacci sequence
-Our editors will review what you’ve submitted and determine whether to revise the article.
-Our editors will review what you’ve submitted and determine whether to revise the article.
-Fibonacci sequence,  the sequence of numbers 1, 1, 2, 3, 5, 8, 13, 21, …, each of which, after the second, is the sum of the two previous numbers; that is, the nth Fibonacci number Fn = Fn − 1 + Fn − 2. The sequence was noted by the medieval Italian mathematician Fibonacci (Leonardo Pisano) in his Liber abaci (1202; “Book of the Abacus”), which also popularized Hindu-Arabic numerals and the decimal number system in Europe. Fibonacci introduced the sequence in the context of the problem of how many pairs of rabbits there would be in an enclosed area if every month a pair produced a new pair and rabbit pairs could produce another pair beginning in their second month. The numbers of the sequence occur throughout nature, such as in the spirals of sunflower heads and snail shells. The ratios between successive terms of the sequence tend to the golden ratio φ = (1 + Square root of√5)/2 or 1.6180…. For information on the interesting properties and uses of the Fibonacci numbers, see number games: Fibonacci numbers.
+
+How to Handle Exceptions in Python: A Detailed Visual Introduction
+Welcome! In this article, you will learn how to handle exceptions in Python.
+In particular, we will cover:
+Are you ready? Let's begin! 😀
+1️⃣ Intro to Exceptions
+We will start with exceptions:
+According to the Python documentation:
+Exceptions are raised when the program encounters an error during its execution. They disrupt the normal flow of the program and usually end it abruptly. To avoid this, you can catch them and handle them appropriately.
+You've probably seen them during your programming projects. 
+If you've ever tried to divide by zero in Python, you must have seen this error message:
+If you tried to index a string with an invalid index, you definitely got this error message:
+These are examples of exceptions.
+🔹 Common Exceptions
+There are many different types of exceptions, and they are all raised in particular situations. Some of the exceptions that you will most likely see as you work on your projects are:
+💡 Tips: To learn more about other types of built-in exceptions, please refer to this article in the Python Documentation.
+🔸 Anatomy of an Exception
+I'm sure that you must have noticed a general pattern in these error messages. Let's break down their general structure piece by piece:
+First, we find this line (see below). A traceback is basically a list detailing the function calls that were made before the exception was raised. 
+The traceback helps you during the debugging process because you can analyze the sequence of function calls that resulted in the exception:
+Then, we see this line (see below) with the path to the file and the line that raised the exception. In this case, the path was the Python shell <pyshell#0> since the example was executed directly in IDLE.
+💡 Tip: If the line that raised the exception belongs to a function, <module>  is replaced by the name of the function.
+Finally, we see a descriptive message detailing the type of exception and providing additional information to help us debug the code:
+2️⃣ Exception Handling: Purpose & Context
+You may ask: why would I want to handle exceptions? Why is this helpful for me? By handling exceptions, you can provide an alternative flow of execution to avoid crashing your program unexpectedly.
+🔹 Example: User Input
+Imagine what would happen if a user who is working with your program enters an invalid input. This would raise an exception because an invalid operation was performed during the process. 
+If your program doesn't handle this correctly, it will crash suddenly and the user will have a very disappointing experience with your product.
+But if you do handle the exception, you will be able to provide an alternative to improve the experience of the user. 
+Perhaps you could display a descriptive message asking the user to enter a valid input, or you could provide a default value for the input. Depending on the context, you can choose what to do when this happens, and this is the magic of error handling. It can save the day when unexpected things happen. ⭐️
+🔸 What Happens Behind the Scenes?
+Basically, when we handle an exception, we are telling the program what to do if the exception is raised. In that case, the "alternative" flow of execution will come to the rescue. If no exceptions are raised, the code will run as expected.
+3️⃣ Time to Code: The try ... except Statement
+Now that you know what exceptions are and why you should we handle them, we will start diving into the built-in tools that the Python languages offers for this purpose. 
+First, we have the most basic statement: try ... except.
+Let's illustrate this with a simple example. We have this small program that asks the user to enter the name of a student to display his/her age:
+Notice how we are not validating user input at the moment, so the user might enter invalid values (names that are not in the dictionary) and the consequences would be catastrophic because the program would crash if a KeyError is raised:
+🔹 Syntax
+We can handle this nicely using try ... except. This is the basic syntax:
+In our example, we would add the try ... except statement within the function. Let's break this down piece by piece:
+If we "zoom in", we see the try ... except statement:
+💡 Note: This code is contained within a while loop to continue asking for user input if the value is invalid. This is an example:
+This is great, right? Now we can continue asking for user input if the value is invalid. 
+At the moment, we are handling all possible exceptions with the same except clause. But what if we only want to handle a specific type of exception? Let's see how we could do this.
+🔸 Catching Specific Exceptions
+Since not all types of exceptions are handled in the same way, we can specify which exceptions we would like to handle with this syntax:
+This is an example. We are handling the ZeroDivisionError exception in case the user enters zero as the denominator:
+This would be the result:
+We are handling this correctly. But... if another type of exception is raised, the program will not handle it gracefully. 
+Here we have an example of a ValueError because one of the values is a float, not an int:
+We can customize how we handle different types of exceptions.
+🔹 Multiple Except Clauses
+To do this, we need to add multiple except clauses to handle different types of exceptions differently. 
+According to the Python Documentation:
+In this example, we have two except clauses. One of them handles ZeroDivisionError and the other one handles ValueError, the two types of exceptions that could be raised in this try block. 
+💡 Tip: You have to determine which types of exceptions might be raised in the try block to handle them appropriately.
+🔸 Multiple Exceptions, One Except Clause
+You can also choose to handle different types of exceptions with the same except clause. 
+According to the Python Documentation:
+This is an example where we catch two exceptions (ZeroDivisionError and ValueError) with the same except clause:
+The output would be the same for the two types of exceptions because they are handled by the same except clause:
+🔹 Handling Exceptions Raised by Functions Called in the try Clause
+An interesting aspect of exception handling is that if an exception is raised in a function that was previously called in the try clause of another function and the function itself does not handle it, the caller will handle it if there is an appropriate except clause. 
+According to the Python Documentation:
+Let's see an example to illustrate this:
+We have the f function and the g function. f calls g in the try clause. With the argument 50, g will raise an IndexError because the index 50 is not valid for the string a. 
+But g itself doesn't handle the exception. Notice how there is no try ... except statement in the g function. Since it doesn't handle the exception, it "sends" it to f to see if it can handle it, as you can see in the diagram below:
+Since f does know how to handle an IndexError, the situation is handled gracefully and this is the output:
+💡 Note: If f had not handled the exception, the program would have ended abruptly with the default error message for an IndexError.
+🔸 Accessing Specific Details of Exceptions
+Exceptions are objects in Python, so you can assign the exception that was raised to a variable. This way, you can print the default description of the exception and access its arguments.
+According to the Python Documentation:
+Here we have an example (see below) were we assign the instance of ZeroDivisionError to the variable e. Then, we can use this variable within the except clause to access the type of the exception, its message, and arguments. 
+The corresponding output would be:
+💡 Tip: If you are familiar with special methods, according to the Python Documentation: "for convenience, the exception instance defines __str__() so the arguments can be printed directly without having to reference .args."
+4️⃣ Now Let's Add: The "else" Clause
+The else clause is optional, but it's a great tool because it lets us execute code that should only run if no exceptions were raised in the try clause.
+According to the Python Documentation:
+Here is an example of the use of the else clause:
+If no exception are raised, the result is printed:
+But if an exception is raised, the result is not printed:
+💡 Tip: According to the Python Documentation:
+5️⃣ The "finally" Clause
+The finally clause is the last clause in this sequence. It is optional, but if you include it, it has to be the last clause in the sequence. The finally clause is always executed, even if an exception was raised in the try clause.  
+According to the Python Documentation:
+The finally clause is usually used to perform "clean-up" actions that should always be completed. For example, if we are working with a file in the try clause, we will always need to close the file, even if an exception was raised when we were working with the data.
+Here is an example of the finally clause:
+This is the output when no exceptions were raised:
+This is the output when an exception was raised:
+Notice how the finally clause always runs.
+❗️Important: remember that the else clause and the finally clause are optional, but if you decide to include both, the finally clause has to be the last clause in the sequence.
+6️⃣ Raising Exceptions
+Now that you know how to handle exceptions in Python, I would like to share with you this helpful tip: you can also choose when to raise exceptions in your code. 
+This can be helpful for certain scenarios. Let's see how you can do this:
+This line will raise a ValueError with a custom message.
+Here we have an example (see below) of a function that prints the value of the items of a list or tuple, or the characters in a string. But you decided that you want the list, tuple, or string to be of length 5. You start the function with an if statement that checks if the length of the argument data is 5. If it isn't, a ValueError exception is raised:
+The output would be:
+Notice how the last line displays the descriptive message:
+You can then choose how to handle the exception with a try ... except statement. You could add an else clause and/or a finally clause. You can customize it to fit your needs. 
+🔹 Helpful Resources
+I hope you enjoyed reading my article and found it helpful. Now you have the necessary tools to handle exceptions in Python and you can use them to your advantage when you write Python code. ? Check out my online courses. You can follow me on Twitter. 
+⭐️ You may enjoy my other freeCodeCamp /news articles:
+I'm a developer, writer, and content creator @freeCodeCamp. I run the freeCodeCamp.org Español YouTube channel.
+
+    If you read this far, tweet to the author to show them you care. Tweet a thanks
+
+
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. Get started
+
+freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit organization (United States Federal Tax Identification Number: 82-0779546)
+Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.
+Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.
+
+                    You can make a tax-deductible donation here.
+                

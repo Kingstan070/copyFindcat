@@ -21,15 +21,43 @@ banner = '''
 
 '''
 got_file = False
+f_locationTEST = "src/test1.txt"
 try:
-    f_locationTEST = sys.argv[1]
+    f_locationDUPL = sys.argv[1]
     got_file = True
 except:
-    f_locationTEST = "src/text1.txt"
     f_locationDUPL = "src/text2.txt"
 
-#os.system('cls||clear')
-#print(banner)
+def main():
+    global got_file
+    global f_locationTEST
+    global f_locationDUPL
+
+    os.system('cls||clear')
+    rprint("- "*35)
+    print(banner)
+    rprint("  "*25+"[purple]v. 1.0.")
+    rprint("- "*35)
+    print()
+
+    # Getting the file or DATA for file, if file not provided
+    if not(got_file):
+        choice = Prompt.ask("Would like to enter text manually or enter file location",
+                            choices=["tm","l"])
+
+        if choice == "l":
+            f_locationDUPL = Prompt.ask("Enter text file location")
+            got_file = True
+        elif choice == "tm":
+            DATA = getData_lines()
+        else:
+            rprint("[red] Unexpected error occured!")
+            exit()
+
+    # Writing the DATA to file, if the file in not provided
+    if not got_file:
+        write_file(DATA, f_locationDUPL)
+    print(getKeyword(f_locationDUPL))
 
 def write_file(data, f_location):
     '''
@@ -71,6 +99,32 @@ def getData_lines():
         print()
         return lines
 
+def getKeyword(file_Location):
+    '''
+    To get the string to be used as a search item to
+    get the url
+
+    file_location : String of the location file
+
+    return        : list of String of search item
+
+    '''
+    search_list = []
+    with open(file_Location,"r") as file:
+        line = file.readline()
+        if ("." not in line) and (len(line.split()) < 10):
+            search_list.append(line)
+        try:
+            for i in range(10):
+                line = file.readline()
+                search_list.append(line.split('.')[0])
+                search_list.append(line.split('.')[-1])
+        except:
+            rprint("[red]Unexpected Error occured in getKeyword function!")
+
+    return filter_text(search_list)
+
+
 def filter_text(content):
     '''
     To filter unwanted content from the web content
@@ -84,7 +138,7 @@ def filter_text(content):
     black_list_full = ["share","learn more","all rights reserved",
                        "featured","search form","search","all categories",
                        "sign up for our newsletter", "sign up",
-                       "select page","about"]
+                       "select page","about","\n",""," "]
 
     # Discard if the element constains this
     black_list_few = ["https:/","http:/","recent blog posts",
@@ -121,10 +175,12 @@ def filter_text(content):
             continue
         contents.append(content[i].strip())
 
+    content.clear()
     return contents
 
 
-
+if __name__ == '__main__':
+    main()
 
 
 
@@ -138,7 +194,7 @@ def filter_text(content):
 # TEST
 #------
 
-print(filter_text(fl.get_content(sys.argv[1])))
+#print(filter_text(fl.get_content(sys.argv[1])))
 
 
 #print(fl.get_content(sys.argv[1]))

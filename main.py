@@ -3,6 +3,7 @@ import sys
 
 import Checker.standard_checker as a
 import scrapper.find_link as fl
+from visualizer import visualDisplay
 
 from rich import print as rprint
 from rich.progress import track
@@ -35,7 +36,7 @@ def main():
     global f_locationTEST
     global f_locationDUPL
 
-    deapth = 10;
+    deapth = 5;
 
     os.system('cls||clear')
     rprint("- "*35)
@@ -71,17 +72,19 @@ def main():
     search_keys = getKeyword(f_locationDUPL)
 
     url_and_percentage = {}
+    #print(search_keys)
     url_list = fl.get_url(search_keys[0]+" "+search_keys[-1])
     if (len(url_list) <= deapth):
         deapth = len(url_list)
     for i in track(range(deapth),
-                   description="[cyan]Processing...      "):
+                    description="[cyan]Processing...      "):
         try:
             url_link = url_list[i]
             url_content = fl.get_content(url_link)
             write_file(url_content, f_locationTEST)
             url_and_percentage[url_link] = a.check4plagirism(f_locationTEST,
-                                                           f_locationDUPL)
+                                                            f_locationDUPL)
+            visualDisplay( f_locationDUPL, f_locationTEST, url_link)
         except StopIteration:
             break
         except Exception as e:
@@ -97,15 +100,15 @@ def write_file(data, f_location):
 
     data       : list of strings
     f_location : string with the location
-                 of text file
+                of text file
 
     returns    : None
 
     '''
     data = [i+"\n" for i in (data)]
-    with open(f_location, 'w') as f1:
+    with open(f_location, 'w',  encoding="utf8") as f1:
         f1.write("")
-    with open(f_location, 'a') as f1:
+    with open(f_location, 'a',  encoding="utf8") as f1:
         f1.writelines(data)
 
 def getData_lines():
@@ -141,19 +144,19 @@ def getKeyword(file_Location):
 
     '''
     search_list = []
-    with open(file_Location,"r") as file:
-        line = file.readline()
-        if ("." not in line) and (len(line.split()) < 10):
-            search_list.append(line)
-        try:
-            for i in track(range(10),
-                           description="Getting search keys"):
-                line = file.readline()
-                search_list.append(line.split('.')[0])
-                search_list.append(line.split('.')[-1])
-        except:
-            rprint("[red]Unexpected Error occured in getKeyword function!")
-
+    with open(file_Location,"r", encoding="utf8") as file:
+        lines = file.readlines()
+        for line in lines:
+            if ("." not in line) and (len(line.split()) < 10):
+                search_list.append(line)
+            try:
+                for i in track(range(10),
+                                description="Getting search keys"):
+                    search_list.extend(line.split('.'))
+                    #search_list.append(line.split('.')[-1])
+            except:
+                rprint("[red]Unexpected Error occured in getKeyword function!")
+    #print(filter_text(search_list))
     return filter_text(search_list)
 
 
@@ -162,7 +165,7 @@ def pretty_print_result(url_and_per):
     To pretty print the result in a table format
 
     url_and_per : Dictionary containing the url and percentage
-                  of plagirism
+                    of plagirism
 
     returns     : None
     '''
@@ -192,13 +195,13 @@ def filter_text(content):
     '''
     # Discard if the element is this
     black_list_full = ["share","learn more","all rights reserved",
-                       "featured","search form","search","all categories",
-                       "sign up for our newsletter", "sign up",
-                       "select page","about","\n",""," "]
+                    "featured","search form","search","all categories",
+                    "sign up for our newsletter", "sign up",
+                    "select page","about","\n",""," "]
 
     # Discard if the element constains this
     black_list_few = ["https:/","http:/","recent blog posts",
-                      "inc. all rights reserved."]
+                    "inc. all rights reserved."]
     '''
     # THIS IS NOT WORKING ! WHY!!!!!!!!!!!
     lg = len(content)

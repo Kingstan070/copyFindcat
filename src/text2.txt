@@ -1,33 +1,21 @@
-Civil Engineering is one of the discipline of Engineering profession that deals with the design, construction and maintenance of all type of manmade structures like buildings, roads, bridges, canals, dams, airports, sewerage systems, pipelines, and railways etc.
-
-Civil Engineering is the only branch of engineering which contributes directly towards the society and it is the oldest branch of engineering.
-
-The Importance of Civil Engineering to Society
-
-Without the existence of Civil Engineering, society wouldn’t function properly. There would be no treated water to drink, no safe buildings and structures, no transportation infrastructure for travelling and no drainage and irrigation channel.
-
-Variety of Specializations and Career Options
-
-There are multiple sub-division and specializations in Civil Engineering which are in need of applications in various sectors.
-
-Architecture engineering: Architecture engineering deals with the technological aspects to planning, design, construction and operation of buildings. Architecture engineering is closely related to Civil engineering.
-Coastal engineering: Coastal engineering is alarmed with the specific construction issues in the adjacent area of the coast, as well as at the coast itself.
-Construction engineering: Construction engineeringis concerned with review of contracts, logistic operations, and prices of supplied products.
-Structural engineering:Structural engineering deals with the analysis of structures, as well as design of structures.
-Earthquake engineering: Earthquake engineering is a sub-section of structural engineering. The main objectives of earthquake engineering are to analysis, design and construct structures to performat earthquake.
-Environment engineering:Environment engineering deals with the issues related to environmental pollution and control of waste due to various activities.
-Geotechnical engineering:Geotechnical engineering is concerned with the minerals, rock and soil. It’s applications are in military, mining, petroleum engineering other than Civil Engineering disciplines.
-Transportation engineering:Transportation engineering is focused on the planning, functional designing, operation of any sort of mode of transportation.
-Hydraulic and water resource engineering:Hydraulic and water resource engineering is concerned with the flow parameters of fluids like water and gas. It’s applications are in designing of bridges, dams, canals and also design of pipes.
-Materials science and engineering: Materials science and engineering deals with characteristics of materials, such as cement, concrete, paint, and metals such as aluminum, bronze and steel, and  polymers  and carbon and steel fibers.
-Nanoscienceand nanotechnology: Nanoscience and nanotechnology is a sub-discipline of Materials science and engineering. It studies systems and manipulates matter on atomic, molecular and supramolecular scales.
-Urban engineering: Urban engineering deals with the infrastructure, services, environmental and land-use issues generally encountered in urban areas.
-
-With the knowledge in various domains, Civil Engineers can cope with many job. In a nutshell,
-
-Civil Engineers are welcomed at every field of engineering, which opens up lots of scope for job.
-Every government organization from I.S.R.O to Nirman Sahayak needs civil engineers.
-Great Opportunity for own start-up business like design consultancy.
-All non-core and IT companies also recruit civil engineers for their own demand. Civil Engineering students have the distinguishing option to choose a career in core and non-core companies.
-Over the years, civil engineers have a constant demand unaffected by the market fluctuations.
-
+A civil engineer's jobs is to design, construct and maintain roads, bridges,
+airports, tunnels, buildings, dams, water supply systems, sewerage systems,
+hydro-electric projects and pretty much everything that constitutes infrastructure.
+Construction : Construction engineering involves the planning and execution,
+transportation of materials, site development on hydraulic, environmental,
+structural and geotechnical engineering.
+Environment Preservation : Environmental engineers administer pollution
+reduction, industrial ecology, and green engineering. They help us understand
+the consequences of our actions on the environment.
+Urban Development : Civil engineering plays a crucial role in the development
+of underground utility networks, the distribution of electrical and
+telecommunication networks, bus service networks, and more.
+Water Resources Management : They predict and manage both quantity and
+quality of aquifers and surface waters like rivers, lakes, etc.
+@December 17, 2021
+Civil 2
+Transportation Networks : Civil engineers ensures effective, conductive, and
+safe movement of goods and people from one point to another, by building the
+right transportation system in right manner.
+Surveying : Surveying is the process of analyzing and recording the
+characteristics of land areas span to help design a plan or map for construction.

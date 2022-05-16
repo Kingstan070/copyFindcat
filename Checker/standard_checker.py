@@ -7,7 +7,7 @@ def check4plagirism(testfile, text):
     
     returns  : float value percentage of plagirism in text file
     '''
-    with open(testfile) as file1, open (text) as file2:
+    with open(testfile,  encoding="utf8") as file1, open (text,  encoding="utf8") as file2:
         filedata = file1.read()
         file2data = file2.read()
         similarity = SequenceMatcher(None, filedata, file2data).ratio()

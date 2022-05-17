@@ -1,21 +1,47 @@
-A civil engineer's jobs is to design, construct and maintain roads, bridges,
-airports, tunnels, buildings, dams, water supply systems, sewerage systems,
-hydro-electric projects and pretty much everything that constitutes infrastructure.
-Construction : Construction engineering involves the planning and execution,
-transportation of materials, site development on hydraulic, environmental,
-structural and geotechnical engineering.
-Environment Preservation : Environmental engineers administer pollution
-reduction, industrial ecology, and green engineering. They help us understand
-the consequences of our actions on the environment.
-Urban Development : Civil engineering plays a crucial role in the development
-of underground utility networks, the distribution of electrical and
-telecommunication networks, bus service networks, and more.
-Water Resources Management : They predict and manage both quantity and
-quality of aquifers and surface waters like rivers, lakes, etc.
-@December 17, 2021
-Civil 2
-Transportation Networks : Civil engineers ensures effective, conductive, and
-safe movement of goods and people from one point to another, by building the
-right transportation system in right manner.
-Surveying : Surveying is the process of analyzing and recording the
-characteristics of land areas span to help design a plan or map for construction.
+Introduction to Hydroponics
+
+Hydroponic Gardening is Simple and Easy
+Hydroponics is basically growing plants without soil. It is a more efficient way to provide food and water to your plants. Plants don’t use soil – they use the food and water that are in the soil. Soil’s function is to supply plants nutrients and to anchor the plants’ roots. In a hydroponic garden, you provide your plants with a complete nutrient formula and an inert growing medium to anchor your plants’ roots so they have easier access to the food and water.
+
+Because the food is dissolved in water, it goes directly to the roots. Plants grow faster and are ready for harvest sooner. You can grow more plants in the same space as you can with a soil garden, and since there’s no soil, there’s no worry about soil-borne diseases or pests – and no weeding.
+
+Choosing The Right Hydroponic System
+Choosing a system is the first step in a successful hydroponic gardening experience. Consider your available space, lighting, budget, and time constraints before purchasing any equipment or settling on a unit to build yourself. Also think about what you want to grow, whether you may want to expand, and recurring costs.
+
+The simplest way to start is with a passive system. These use a wicking material to draw nutrients up to the roots, or the root tips are suspended in a stationary solution with the main portion of the rootball hanging in the air. Passive systems are affordable and easy to build yourself. They are best suited for smaller plants. Active systems are best for larger plants and gardens. An active system uses a pump and timer to flow nutrients around the plant’s roots and to provide aeration. It costs more, but is more efficient and requires less attention, since the pump and timer handle everything automatically. Once you’ve looked at passive vs. active systems, you’ll need to choose between media-based and water culture systems.
+
+Media-based systems such as ebb-and flow (flood-and-drain), top-feed (drip), or bottom-feed systems rely on a growing medium to support the plants and hold nutrient solution around their roots. Most operate on timers, alternately wetting the medium to wash out salts and replenish nutrients and then draining so the plants can draw in atmospheric oxygen. Setup is more complex, costs are higher, and media needs to be replaced occasionally. These systems need to be protected from power outages, which can leave vulnerable roots high and dry if the pump stops functioning. On the other hand, these systems are super efficient, since nutrients are recycled back into the reservoir, and use of timers means they need less attention from you.
+
+Water culture systems usually operate without media. Plants are anchored in a plank that floats on the reservoir, suspending the roots in the nutrient solution. This kind of system is simple and inexpensive to set up and is great for water-loving plants, though special care must be taken if you want to use it with large plants. You can use rockwool cubes or small amounts of gravel to anchor plants like tomatoes and cucumbers that get top heavy when they start to bear fruit. You can also use plastic flaps, foam rings, fiber cups, or plastic collars for plant support, or tie plants to a trellis.
+
+
+Hydrofarm Brings Productive Commercial Technology to Home Hydroponics
+Commercial growers have been using efficient hydroponic methods for years. There's no worry about soil-born diseases or pests, and there's no weeding. For professional growers, quicker harvests and higher yields are good reasons to use hydroponics.
+
+At Hydrofarm we've adapted these proven techniques to convenient home gardening systems. We have incorporated high performance technology with quality professional-grade materials, and designed a full range of systems for your personal use.
+
+
+Grow Lights Basics
+At Hydrofarm we’ve taken highly effective but cumbersome commercial greenhouse technology and created a broad selection of high intensity lighting systems for both the novice indoor gardener and the seasoned indoor grower. Our high intensity grow lights are easy for home gardeners to use. They come pre-wired and are rated at 120 volts (your normal home current), so they’re compatible with any standard home outlet. Just hang them from a simple ceiling hook, plug them in, and start growing.
+
+With Hydrofarm’s sun-like high intensity lighting, you can turn any room of your home into a virtual greenhouse. Grow any plant, anywhere, anytime you choose! Imagine harvesting fresh tomatoes, picking peppers or growing a rare orchid in your basement – these lights make it possible. A single system can easily provide all the light needed to cover anywhere from a 1' x 2' area up to a 12' x 12' area, depending on what size wattage system meets your growing needs.
+
+Hydrofarm’s full spectrum fluorescents and lighting systems make it easy to grow the garden you want – whether you’re starting seedlings for your outdoor spring garden or growing your favorite plants indoors. Use our lower wattage fluorescents for seedlings, cuttings and low light plants like African violets. Higher wattage fluorescent grow lights provide an excellent starter light for year-round gardening indoors.
+
+
+Hydrofarm High Intensity Lights are Easy to Use
+One of Hydrofarm's most important innovations has been to take the effective but cumbersome commercial greenhouse lights and make them easy for home gardeners to use. A Hydrofarm High Intensity Grow Light can be hung from a simple ceiling hook and plugged in as easily as a home table lamp.
+
+The systems are completely pre-wired, UL listed (with lens), and ready to plug in. Everything is rated at 120 volts (your normal home current) and plugs into any standard home outlet.
+
+
+Growing Media
+Coconut Coir is an organic grow medium for hydroponic cultivation or amendment to organic soil, excellent air and moisture retention properties, and harbors beneficial micro-organisms.
+
+Organic Soil is rich in beneficial microbiology – it contains its own ecosystem within every bag. Ideal for all stages of plant growth and takes fortification of synthetic and organic nutrition regiments.
+
+Mats improve plant stability and root growth in all tray style hydroponic systems. Root growth is not restricted, but improved, as these mats provide protection from algae and light contamination.
+
+Compressed bricks provide a compact and efficient means for storage and transport of large volumes of coir. Shelf life is indefinite when protected from moisture and sterility is ensured.
+
+Peat pellets, organic plugs, and rockwool starter cubes are excellent for propagation of healthy cuttings and seedlings. Root systems become well established, increasing the transplant rates of your favorite crops.

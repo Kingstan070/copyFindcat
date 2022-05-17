@@ -73,7 +73,18 @@ def main():
 
     url_and_percentage = {}
     #print(search_keys)
-    url_list = fl.get_url(search_keys[0]+" "+search_keys[-1])
+    if (len(search_keys) >= 7 ):
+        url_list = fl.get_url(search_keys[0]
+                            +" "+search_keys[len(search_keys)//3]
+                            +" "+search_keys[-1*(len(search_keys)//3)]
+                            +" "+search_keys[-1])
+    elif (len(search_keys) >= 3):
+        url_list = fl.get_url(search_keys[0]
+                            +" "+search_keys[len(search_keys)//2]
+                            +" "+search_keys[-1])
+    else:
+        url_list = fl.get_url(search_keys[0]+" "+search_keys[-1])
+        
     if (len(url_list) <= deapth):
         deapth = len(url_list)
     for i in track(range(deapth),

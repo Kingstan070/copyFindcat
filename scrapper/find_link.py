@@ -1,7 +1,8 @@
-from urllib.request import urlopen
-import requests
-import re
-from bs4 import BeautifulSoup
+# from urllib.request import urlopen
+
+import requests # For accessing internet
+import re # For formatting text
+from bs4 import BeautifulSoup # To get the content and access html in interenet
 
 def get_url(search_item):
     '''
@@ -38,4 +39,7 @@ def get_content(url):
     data = ''
     for data in soup.find_all(['p','h1','h2','h3']):
         content.append(data.get_text())
+    #print(content)
     return content
+
+#get_content("https://en.wikipedia.org/wiki/Wikipedia:How_to_be_civil")

@@ -24,6 +24,7 @@ banner = '''
 
 '''
 got_file = False
+show = False
 f_locationTEST = "src/test1.txt"
 try:
     f_locationDUPL = sys.argv[1]
@@ -31,7 +32,17 @@ try:
 except:
     f_locationDUPL = "src/text2.txt"
 
+try:
+    if show == sys.argv[2]:
+        show = True
+except IndexError:
+    pass
+except Exception as e:
+    print(e)
+
+
 def main():
+    global show
     global got_file
     global f_locationTEST
     global f_locationDUPL
@@ -47,6 +58,11 @@ def main():
 
     # Getting the file or DATA for file, if file not provided
     if not(got_file):
+        choice = Prompt.ask("Do you need visual representation of plagiarism",
+                            choices=["y","n"])
+        if choice == "y":
+            show = True
+
         choice = Prompt.ask("Would like to enter text manually or enter file location",
                             choices=["tm","l"])
 
@@ -84,7 +100,7 @@ def main():
                             +" "+search_keys[-1])
     else:
         url_list = fl.get_url(search_keys[0]+" "+search_keys[-1])
-        
+
     if (len(url_list) <= deapth):
         deapth = len(url_list)
     for i in track(range(deapth),
@@ -95,7 +111,8 @@ def main():
             write_file(url_content, f_locationTEST)
             url_and_percentage[url_link] = a.check4plagirism(f_locationTEST,
                                                             f_locationDUPL)
-            visualDisplay( f_locationDUPL, f_locationTEST, url_link)
+            if show:
+                visualDisplay( f_locationDUPL, f_locationTEST, url_link)
         except StopIteration:
             break
         except Exception as e:
@@ -157,12 +174,12 @@ def getKeyword(file_Location):
     search_list = []
     with open(file_Location,"r", encoding="utf8") as file:
         lines = file.readlines()
-        for line in lines:
+        for line in track(lines,
+                        description="[green]Getting search keys"):
             if ("." not in line) and (len(line.split()) < 10):
                 search_list.append(line)
             try:
-                for i in track(range(10),
-                                description="Getting search keys"):
+                for i in range(10):
                     search_list.extend(line.split('.'))
                     #search_list.append(line.split('.')[-1])
             except:
